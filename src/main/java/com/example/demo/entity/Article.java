@@ -21,6 +21,7 @@ public class Article {
     String title;
 
     @Column(name = "article_text")
+    @Lob
     String articleText;
 
     @Column(name = "created_at")

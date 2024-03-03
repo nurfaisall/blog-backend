@@ -49,4 +49,16 @@ public class Blog {
         articleService.addArticle(article);
     return article;
     }
+
+    @DeleteMapping("deleteArticle/{id}")
+    public void deleteArticle(@PathVariable(value = "id")Long id){
+
+        articleService.deleteArticleById(id);
+
+    }
+
+    @DeleteMapping("/")
+    public void deleteAllArticle(){
+        articleService.deleteAllArticle();
+    }
 }
